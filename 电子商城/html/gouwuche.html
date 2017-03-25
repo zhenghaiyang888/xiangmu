@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>购物袋</title>
+	<link rel="stylesheet" href="../css/gouwudai.css" />
+	<style>
+		 .oul1 {
+			  top: 43px;
+			  left: 920px;
+			  display: none;
+			  width: 85px;
+			  background: url("../img/xiangqing/share-bg.png") 0 0 no-repeat;
+			  position: absolute;
+			  z-index: 2;
+			}
+			 .oul1 li {
+			  height: 37px;
+			  margin-bottom: 1px;
+			}
+			.oul1 li div {
+			  width: 25px;
+			  height: 25px;
+			  position: absolute;
+			  left: 9px;
+			}
+			 .oul1 li a {
+			  display: inline-block;
+			  width: 5px;
+			  height: 100%;
+			  line-height: 37px;
+			  position: absolute;
+			 padding-left: -100px;
+			  z-index: 4;
+			  color: #fff;
+			  font-size: 12px;
+			}
+			 .oul1 li:first-child {
+			  margin-top: 10px;
+			}
+			 .oul1 li:first-child a:hover {
+			  color: green;
+			}
+			 .oul1 li:nth-child(2) a:hover {
+			  color: #0066CB;
+			}
+			 .oul1 li:nth-child(3) a:hover {
+			  color: red;
+			}
+			 .oul1 li:first-child div {
+			  top: 19px;
+			  background: url("../img/icon.png") 0 -500px no-repeat;
+			}
+			 .oul1 li:first-child:hover div {
+			  top: 19px;
+			  background: url("../img/icon.png") -50px -500px no-repeat;
+			}
+			 .oul1 li:nth-child(2) div {
+			  top: 57px;
+			  background: url("../img/icon.png") 0 -550px no-repeat;
+			}
+			.oul1 li:nth-child(2):hover div {
+			  top: 57px;
+			  background: url("../img/icon.png") -51px -550px no-repeat;
+			}
+			 .oul1 li:nth-child(3) div {
+			  top: 95px;
+			  background: url("../img/icon.png") 0 -600px no-repeat;
+			}
+			 .oul1 li:nth-child(3):hover div {
+			  top: 95px;
+			  background: url("../img/icon.png") -50px -600px no-repeat;
+			}
+       
+	</style>
+
+</head>
+<body>
+	<div class="car">
+		<div class="car-header">
+			<a href="shouye.html"></a>
+			<a href="javascript:;">购物袋</a>
+			<a href="javascript:alert('对不起，您的设备不支持扫一扫功能！')" class="sao"></a>
+			<a href="sousuo.html"></a>
+			<a href="javascript:;" id="a1"></a>
+		    <ul class="oul1">
+			        <li><div></div><a href="#">微信</a></li>
+			        <li><div></div><a href="#">空间</a></li>
+			        <li><div></div><a href="#">微博</a></li>
+            </ul>
+		</div>
+		<div class="dai">
+			<dl class="fl">
+				<dt class="fl"></dt>
+				<dd class="fr"><p>我的购物袋</p><p class="ba">MYSHOPPINGBAG</p></dd>
+			</dl>
+			<div class="xian fr">
+				<img src="../img/gouwuche/a_03.gif" alt="" />
+				<span>查看购物袋</span>
+				<span>填写订单</span>
+				<span>完成购买</span>
+			</div>
+		</div>
+		<div class="buy">
+			<table id="tab">
+				<tr>
+					<td class="td-a aa">商品信息</td>
+					<td class="td-b aa">单价（元）</td>
+					<td class="td-c aa">数量</td>
+					<td class="td-d aa">返料票</td>
+					<td class="td-e aa">小计（元）</td>
+					<td class="td-f aa">操作</td>
+				</tr>
+				<tr>
+					<td class="td-a">
+						<input type="checkbox" class="fl checkbox"/>
+						<dl class="fr">
+						  <dt class="fl"><img src="../img/gouwuche/dai_03.gif" alt="" /></dt>
+						  <dd class="fr">
+						  	<h3>Life after life袋鼠七分袖衬衫</h3>
+						  	<p>颜色:黑色</p>
+						  	<p>尺码:XXL</p>
+						  </dd>
+					    </dl>
+					</td>
+					<td class="td-b" id="td1">￥<span class="price">20.40</span></td>
+					<td class="td-c">
+						<input type="button" value="-" class="min">
+						<input type="text" value="1" class="text_box">
+						<input type="button" value="+" class="add">
+					
+					</td>
+					<td class="td-d">0</td>
+					<td class="td-e" id="td2">￥<span class="subtotal ss1">20.40</span></td>
+					<td class="td-f"><span>删除</span><span>移入收藏</span></td>
+				</tr>
+				<tr>
+					<td class="td-a">
+						<input type="checkbox" class="fl checkbox"/>
+						<dl class="fr">
+						  <dt class="fl"><img src="../img/gouwuche/dai_06.gif" alt="" /></dt>
+						  <dd class="fr">
+						  	<h3>Life after life袋鼠七分袖衬衫</h3>
+						  	<p>颜色:黑色</p>
+						  	<p>尺码:XXL</p>
+						  </dd>
+					    </dl>
+					</td>
+					<td class="td-b">￥<span class="price">15.40</span></td>
+					<td class="td-c">
+						<input type="button" value="-" class="min">
+						<input type="text" value="1" class="text_box">
+						<input type="button" value="+" class="add">
+					</td>
+					<td class="td-d">0</td>
+					<td class="td-e">￥<span class="subtotal ss2">15.40</span></td>
+					<td class="td-f"><span>删除</span><span>移入收藏</span></td>
+				</tr>
+				<tr>
+					<td class="td-a">
+						<input type="checkbox" class="fl checkbox"/>
+						<dl class="fr">
+						  <dt class="fl"><img src="../img/gouwuche/dai_09.gif" alt="" /></dt>
+						  <dd class="fr">
+						  	<h3>Life after life袋鼠七分袖衬衫</h3>
+						  	<p>颜色:黑色</p>
+						  	<p>尺码:XXL</p>
+						  </dd>
+					    </dl>
+					</td>
+					<td class="td-b">￥<span class="price">10.00</span></td>
+					<td class="td-c">
+						<input type="button" value="-" class="min">
+						<input type="text" value="1" class="text_box">
+						<input type="button" value="+" class="add">
+					</td>
+					<td class="td-d">0</td>
+					<td class="td-e">￥<span class="subtotal ss3">10.00</span></td>
+					<td class="td-f"><span>删除</span><span>移入收藏</span></td>
+				</tr>
+			</table>	
+		</div>
+		<div class="choose">
+			<div class="cho-left fl">
+				<span><input type="checkbox"  id="cck"/>全选</span>
+				<span>批量删除</span>
+				<span>批量移入收藏夹</span>
+			</div>
+			<div class="cho-right fr">
+				商品总价:￥<span id="total">999.00</span>元
+			</div>
+		</div>
+		<div class="sure">
+			<div class="sur-left fl"><span><img src="../img/gouwuche/dai_16.gif"/></span>再逛逛</div>
+			<div class="sur-right fr"><span><img src="../img/gouwuche/dai_12.gif" alt="" /></span>去结算</div>
+		</div>
+		<div class="cou">
+			<div class="cou-left fl">
+				<span>-</span>凑单商品
+			</div>
+			<div class="cou-right fr">
+				<span><img src="../img/gouwuche/dai_16.gif" alt="" /></span>
+				<span><img src="../img/gouwuche/dai_18.gif" alt="" /></span>
+			</div>
+		</div>
+		<div class="shangp">
+			<ul>
+				<li><img src="../img/gouwuche/d_03.gif" alt="" /></li>
+				<li><img src="../img/gouwuche/d_05.gif" alt="" /></li>
+				<li><img src="../img/gouwuche/d_07.gif" alt="" /></li>
+				<li><img src="../img/gouwuche/d_09.gif" alt="" /></li>
+				<li><img src="../img/gouwuche/d_11.gif" alt="" /></li>
+				<li><img src="../img/gouwuche/d_13.gif" alt="" /></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
+<script src="../js/jquery-3.1.1.js"></script>
+<script>
+	
+	//下拉菜单
+        $(document).ready(function () {
+                $('#a1').click(
+                function () { $('.oul1').slideToggle(); }
+           );
+          
+        });
+        
+        
+        
+//数量加减  小计
+  $.each($('input[class*=text_box]'), function(i, t) {
+				subtotal($(t));
+			})
+  
+
+
+
+  		$(".add").click(function(){
+		var t=$(this).parent().find('input[class*=text_box]');
+		t.val(parseInt(t.val())+1);
+		if(isNaN(t.val())){
+			t.val(1);
+		}
+		subtotal(t)
+	});
+	
+	$(".min").click(function() {
+					var t = $(this).parent().find('input[class*=text_box]');
+					t.val(parseInt(t.val()) - 1);
+					if(parseInt(t.val()) <= 0 || isNaN(t.val())) {
+						t.val(1);
+					}
+					subtotal(t);
+				});
+	$('input[class*=text_box]').keyup(function() {
+		var t = $(this);
+		t.val(parseInt(t.val()));
+		if(isNaN(t.val()) || parseInt(t.val()) <= 0) {
+			t.val(1);
+		}
+		if(t.val(parseInt(t.val())) != t.val()) {
+			t.val(parseInt(t.val()));
+		}
+		subtotal(t);
+	});
+
+	
+//	function subtotal(sum) {
+//					var a=$('.price').html()*$('.text_box').val();
+//					console.log(a);
+//					$('.subtotal').html(a);
+//					setTotal();
+//		}
+	
+	function subtotal(sum) {
+					var n = 0;
+					n = parseFloat(sum.parent().siblings('.td-b').children('.price').text()) * parseInt(sum.val());
+					sum.parent().siblings('.td-e').children('.subtotal').html(n.toFixed(2));
+					setTotal();
+				}
+	
+	
+	  function setTotal() {
+					var s=parseFloat($('.ss1').html());
+					var a=parseFloat($('.ss2').html());
+					var b=parseFloat($('.ss3').html());
+					var i=s+a+b;
+					console.log(i.toFixed(2));
+				
+					$("#total").html(i);
+					
+				}
+				setTotal();
+	 
+	
+
+  //全选
+    $('#cck').click(function() {
+		if(this.checked) {
+			$('#tab tr :checkbox').prop('checked', true);
+			 
+		} else {
+			$('#tab tr :checkbox').prop('checked', false);
+		}
+	})
+    
+
+</script>

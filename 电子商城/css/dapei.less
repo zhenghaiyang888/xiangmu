@@ -1,0 +1,227 @@
+@import url('reset.css');
+.full {
+    width: 100%;
+    height: 100%;
+}
+.whb(@w, @h, @b) {
+    width: @w;
+    height: @h;
+    background: @b;
+}
+.f(@f:left) {
+    float: @f;
+}
+.p(@p) {
+    position: @p;
+}
+
+.full{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+    .header{
+        .whb(1024px,43px,#323333);
+        margin: 0 auto;
+       
+        h1{
+              float: left;
+              margin-left: 440px;
+              color: #fff;
+              font-size: 20px;
+              margin-top: 6px;
+        }
+        .a1{
+            
+            position: relative;
+            .whb(22px,22px,null);
+             margin-left: 32px;
+          
+            display: block;
+            margin-top: 10px;
+            float: left;
+            background: url(../img/icon.png) no-repeat;
+            background-position:0 0;        
+        }
+        .a1:hover{
+            background-position:-50px 0;  
+        }
+        .oul{
+           .whb(137px,330px,null);
+          display: none;
+          position: absolute;
+          z-index: 2;
+           top: 43px;
+            
+            li{
+                 
+                .whb(137px,41.2px,#000000);
+                
+               
+                text-align: center;
+                line-height: 41.2px;
+                a{
+                     font-weight: bold;
+                     font-size: 18px;
+                    color: #fff;
+                }
+                .oa1{
+                    font-weight: bold;
+                     font-size: 18px;
+                    
+                }
+                
+               
+            }
+         
+             li:hover{
+                    background: #222222;
+                    a{
+                        color: yellow;
+                        text-decoration: none;
+                    }
+                    
+               }
+        }
+    
+        p{
+            float: right;
+            margin-top: 10px;
+            a{
+                float: left;
+                 .whb(22px,22px,null);
+                 display: block;
+                 margin-right: 15px;
+                 background: url(../img/icon.png) no-repeat;
+                
+            }
+            .a2{
+                 background-position: -100px 0;  
+            }
+            .a2:hover{
+                 background-position: -150px 0;  
+            }
+            .a3{
+                 background-position: 0 -100px;  
+            }
+            .a3:hover{
+                background-position: -50px -100px;  
+            }
+            .a4{
+                 background-position: -100px -100px;  
+            }
+            .a4:hover{
+                 background-position: -150px -100px;  
+            }
+        }
+     
+    }
+    
+    nav{
+        width: 1024px; 
+        height: 55px; 
+        border-bottom: 3px solid #a5aaaa; 
+        margin: 0 auto;
+        li{
+            float: left;
+            a{
+                font-size: 17px; 
+                font-weight: bold;
+                color: #323333; 
+                display: inline-block; 
+                width: 125px; 
+                height: 53px; 
+                line-height: 53px;
+                text-align: center;
+            }
+            a:hover{
+                color: #fae90b; 
+                border-bottom: 5px solid #323333; 
+                transition: 0.3s;
+            }
+            .select{
+                border-bottom: 5px solid #323333;
+            }
+        }
+        li:first-child{
+            margin-left: 32px;
+        }
+        li+li{
+            margin-left: 85px;
+        }
+    }
+    
+    main{
+        width: 1024px;
+  
+        margin: 22px auto 0;
+       .main-item{
+           display: none;
+           .col{
+               width: 238px; 
+               float: left; 
+               margin-left: 14px;
+               .col-item{
+                   margin-bottom: 20px;
+                    .img-ctn{
+                            img{
+                            width: 238px; 
+                            transition: 0.5s;
+                         }
+                         img:hover{opacity: 0.7;}
+                    }
+                }
+                .item-info{
+                    margin-top: 7px;
+                     .link{
+                         cursor: pointer; 
+                         float: left; 
+                         width: 25px; 
+                         height: 35px; 
+                         background: url('../img/icon.png') 8px -245px no-repeat #313433; 
+                         color: #b3aca9;
+                         span{
+                             font-size: 12px;
+                             padding: 16px 0 0 6px; 
+                             display: block;
+                        }
+                    }
+                     .info-desc{
+                         float: left; 
+                         margin-left: 16px;
+                         h3{
+                             font-size: 12px; 
+                             text-align: center; 
+                             margin: 2px auto 6px;
+                        }
+                         i{
+                             display: inline-block; 
+                             width: 62px; 
+                             height: 1px; 
+                             vertical-align: middle;
+                        }
+                         i:first-of-type{
+                             background: url('../img/icon.png') 0 -800px no-repeat;
+                        }
+                        i:last-of-type{
+                            background: url('../img/icon.png') -100px -800px no-repeat;
+                        }
+                        a{
+                            color: #666; 
+                            display: inline-block; 
+                            width: 30px; 
+                            padding-left: 25px; 
+                            height: 12px; 
+                            background: url('../img/icon.png') -42px -250px no-repeat;
+                        }
+                        a:hover{
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    

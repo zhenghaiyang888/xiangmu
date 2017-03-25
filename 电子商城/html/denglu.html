@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/login.css"/>
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <h1><a href="shouye.html"></a></h1>
+            <span></span>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="k1"></div>
+                <dl>
+                    <dt><img src="../img/denglu/denglu-pic01.png" alt=""/></dt>
+                    <dd><font class="lf">有范</font><font class="rt">是一种生活态度</font></dd>
+                </dl>
+            </div>
+            <div class="right">
+                <div class="all">
+                    <div class="title">登陆有范</div>
+                    <div class="user ss1">
+                        <span class="kk"></span>
+                        <input type="text" placeholder="用户名/手机号" class="ins" id="user"/>
+                    </div>
+                    <div class="psd ss1">
+                        <span class="kk"></span>
+                        <input type="text" placeholder="密码" class="ins" id="psd"/>
+                    </div>
+                    <input type="button" value="登陆" class="log"/>
+                    <div class="ss2">
+                        <div class="left-one"><input type="checkbox" id="in"/><label for="in">记住登陆状态</label></div>
+                        <div class="right-one"><a href="#" class="a1">忘记密码？</a>|<a href="#" class="a2">立即注册</a></div>
+                    </div>
+                    <div class="san">
+                        <font>第三方登录方式：</font>
+                        <div class="ss3 ss"></div>
+                        <div class="ss2 ss"></div>
+                        <div class="ss4 ss"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="../js/jquery-3.1.1.js"></script>
+<script>
+	$('.log').click(function(){
+		var $name=$('#user').val();
+		var $psd=$('#psd').val();
+		
+		$.ajax({
+			type:"get",
+			url:'http://www.petrichoro.com/ports/index.php/Home/User/login?user='+$name+'&psd='+$psd,
+			async:true,
+			dataType:'jsonp',
+			success:function(data){
+				console.log(data);
+				if(data.status==-8){
+					alert("用户名不存在");
+				}
+				if(data.status==-7){
+					alert("密码错误");
+				}
+				if(data.status==1){
+					location.href="shouye.html";
+				}
+			}
+		});
+		
+	})
+</script>

@@ -1,0 +1,230 @@
+@import url('reset.css');
+.full {
+  width: 100%;
+  height: 100%;
+}
+.full {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+header {
+  width: 1024px;
+  height: 44px;
+  background: #323333;
+  margin: 0 auto;
+  position: relative;
+}
+header .h-rtn a {
+  cursor: pointer;
+  width: 15px;
+  height: 25px;
+  background: url('../img/icon.png') -100px -50px no-repeat;
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+header .h-rtn:hover {
+  background: url('../img/icon.png') -150px -50px no-repeat;
+}
+header .h-mid {
+  color: #fbfbfb;
+  font-size: 17px;
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header .h-mid h1 {
+  font-weight: normal;
+}
+header .h-btn {
+  float: right;
+  margin-right: 30px;
+  padding-top: 10px;
+}
+header .h-btn li {
+  width: 24px;
+  height: 24px;
+  float: left;
+  cursor: pointer;
+}
+header .h-btn li a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+header .h-btn li + li {
+  margin-left: 40px;
+}
+header .h-btn li:first-child {
+  width: 25px;
+  background: url('../img/icon.png') 0 -50px no-repeat;
+}
+header .h-btn li:first-child:hover {
+  background: url('../img/icon.png') -50px -50px no-repeat;
+}
+header .h-btn li:last-child {
+  background: url('../img/icon.png') -100px -100px no-repeat;
+}
+header .h-btn li:last-child:hover {
+  background: url('../img/icon.png') -150px -100px no-repeat;
+}
+main {
+  width: 1024px;
+  margin: 0 auto;
+}
+main .top {
+  position: relative;
+  border-bottom: 7px solid #DBDBDC;
+}
+main .top .bg {
+  width: 100%;
+  height: 150px;
+  background: url('../img/wode/bg.png') 0 0 no-repeat;
+}
+main .top .portrait {
+  width: 95px;
+  height: 95px;
+  border: 3px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 458px;
+  top: 81px;
+}
+main .top .portrait img {
+  margin-left: -4px;
+  margin-top: -4px;
+}
+main .top .portrait:hover {
+  border-color: #fae90b;
+  transition: 2.5s;
+}
+main .top .info {
+  width: 100%;
+  height: 108px;
+}
+main .top .info h3 {
+  font-size: 14px;
+  padding: 55px 0 12px 495px;
+}
+main .top .info li {
+  float: left;
+  font-size: 12px;
+  margin: 0 35px 0 0;
+}
+main .top .info li:first-child {
+  margin-left: 395px;
+}
+main .btm ul > li {
+  width: 100%;
+  height: 55px;
+  color: #323333;
+  border-bottom: 1px solid #efefef;
+}
+main .btm ul > li:first-child {
+  height: 60px;
+  line-height: 60px;
+}
+main .btm ul > li:nth-child(2) {
+  height: 80px;
+}
+main .btm a {
+  transition: 0.3s;
+}
+main .btm ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  line-height: 60px;
+}
+main .btm ul > li > a:hover {
+  color: red;
+  background: #eee;
+}
+main .btm ul > li b {
+  font-weight: normal;
+  margin-left: 20px;
+}
+main .btm ul > li i {
+  float: right;
+  width: 9px;
+  height: 16px;
+  background: url('../img/icon.png') -150px -450px no-repeat;
+  margin: 20px;
+}
+main .btm ul > li span {
+  float: right;
+}
+main .btm ul > li:first-child i {
+  margin-top: 22px;
+}
+main .btm ul > li:nth-child(2) {
+  height: 80px;
+}
+main .btm ol li {
+  float: left;
+}
+main .btm ol li a {
+  font-size: 15px;
+}
+main .btm ol li a:hover {
+  color: #fae90b;
+}
+main .btm ol li div {
+  width: 35px;
+  height: 35px;
+  margin: 16px 0 5px 0;
+}
+main .btm ol li:hover div {
+  transition: 0.4s ease-out;
+}
+main .btm ol li:nth-child(1) div {
+  background: url('../img/icon.png') 0 -650px no-repeat;
+}
+main .btm ol li:nth-child(1):hover div {
+  background: url('../img/icon.png') -50px -650px no-repeat;
+}
+main .btm ol li:nth-child(2) div {
+  background: url('../img/icon.png') -100px -650px no-repeat;
+  margin-left: 6px;
+}
+main .btm ol li:nth-child(2):hover div {
+  background: url('../img/icon.png') -150px -650px no-repeat;
+}
+main .btm ol li:nth-child(3) div {
+  background: url('../img/icon.png') 0 -700px no-repeat;
+  margin-left: 6px;
+}
+main .btm ol li:nth-child(3):hover div {
+  background: url('../img/icon.png') -50px -700px no-repeat;
+}
+main .btm ol li:nth-child(4) div {
+  background: url('../img/icon.png') -100px -700px no-repeat;
+  margin-left: 6px;
+}
+main .btm ol li:nth-child(4):hover div {
+  background: url('../img/icon.png') -150px -700px no-repeat;
+}
+main .btm ol li:nth-child(5) div {
+  background: url('../img/icon.png') 0 -750px no-repeat;
+  margin-left: 6px;
+}
+main .btm ol li:nth-child(5):hover div {
+  background: url('../img/icon.png') -50px -750px no-repeat;
+}
+main .btm ol li:nth-child(6) div {
+  background: url('../img/icon.png') -100px -750px no-repeat;
+  margin-left: 1px;
+}
+main .btm ol li:nth-child(6):hover div {
+  background: url('../img/icon.png') -149px -750px no-repeat;
+}
+main .btm ol li:first-child {
+  margin-left: 45px;
+}
+main .btm ol li + li {
+  margin-left: 137px;
+}

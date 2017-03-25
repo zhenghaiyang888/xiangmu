@@ -1,0 +1,234 @@
+@import url('reset.css');
+.full {
+    width: 100%;
+    height: 100%;
+}
+.whb(@w, @h, @b) {
+    width: @w;
+    height: @h;
+    background: @b;
+}
+.f(@f:left) {
+    float: @f;
+}
+.p(@p) {
+    position: @p;
+}
+
+.full{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+header{
+    width: 1024px; 
+    height: 44px; 
+    background: #323333; 
+    margin: 0 auto; 
+    position: relative;
+    .h-rtn{
+        a{
+            cursor: pointer; 
+            width: 15px; 
+            height: 25px; 
+            background: url('../img/icon.png') -100px -50px no-repeat; 
+            position: absolute; 
+            left: 30px; 
+            top: 10px;
+        }
+    }
+    .h-rtn:hover{
+        background: url('../img/icon.png') -150px -50px no-repeat;
+    }
+    .h-mid{
+        color: #fbfbfb; 
+        font-size: 17px;
+        position: absolute; 
+        top: 13px; left: 50%; 
+        transform: translateX(-50%);
+        h1{
+            font-weight: normal;
+        }
+    }
+    .h-btn{
+        float: right; 
+        margin-right: 30px; 
+        padding-top: 10px;
+        li{
+            width: 24px; 
+            height: 24px; 
+            float: left; 
+            cursor: pointer;
+            a{
+                display: inline-block; 
+                width: 24px; 
+                height: 24px;
+            }
+        }
+        li+li{margin-left: 40px;}
+        li:first-child{
+            width: 25px; 
+            background: url('../img/icon.png') 0 -50px no-repeat;
+        }
+        li:first-child:hover{
+            background: url('../img/icon.png') -50px -50px no-repeat;
+       }
+       li:last-child{
+           background: url('../img/icon.png') -100px -100px no-repeat;
+        }
+         li:last-child:hover{
+             background: url('../img/icon.png') -150px -100px no-repeat;
+        }
+    }
+}
+
+main{
+    width: 1024px; 
+    margin: 0 auto;
+    .top{
+        .bg{
+            width: 100%; 
+            height: 150px; 
+            background: url('../img/wode/bg.png') 0 0 no-repeat;
+        }
+        position: relative;
+        border-bottom: 7px solid #DBDBDC;
+         .portrait{
+             width: 95px; 
+             height: 95px; 
+             border: 3px solid white; 
+             border-radius: 50%; 
+             overflow: hidden; 
+             position: absolute; 
+             left: 458px; 
+             top: 81px;
+             img{
+                 margin-left: -4px;
+                  margin-top: -4px;
+            }
+        }
+        .portrait:hover{
+            border-color: #fae90b;  
+            transition: 2.5s;
+        }
+        .info{
+            width: 100%; 
+            height: 108px;
+            h3{
+                font-size: 14px;
+                padding: 55px 0 12px 495px;
+           }
+           li{
+               float: left; 
+               font-size: 12px;
+               margin: 0 35px 0 0;
+           }
+           li:first-child{margin-left: 395px;}
+        }
+    }
+    .btm{
+        ul>li{
+            width: 100%; 
+            height: 55px; 
+            color: #323333; 
+            border-bottom: 1px solid #efefef;
+        }
+         ul>li:first-child{
+             height: 60px; 
+             line-height: 60px;
+        }
+         ul>li:nth-child(2){height: 80px;}
+         a{transition: 0.3s;}
+          ul>li>a{
+              display: inline-block; 
+              width: 100%; 
+              height: 100%; 
+              font-size: 15px;
+              line-height: 60px;
+        }
+        ul>li>a:hover{
+            color: red; 
+            background: #eee;
+       }
+       ul>li{
+            b{
+               font-weight: normal; 
+               margin-left: 20px;
+            }
+            i{
+                float: right; 
+                width: 9px; 
+                height: 16px; 
+                background: url('../img/icon.png') -150px -450px no-repeat; 
+                margin: 20px;
+            }
+            span{float: right;}
+       }
+        ul>li:first-child i{margin-top: 22px;}
+        ul>li:nth-child(2){height: 80px;}
+        ol{
+            li{
+                float: left;
+                a{
+                    font-size: 15px;
+                }
+                a:hover{
+                    color: #fae90b;
+                }
+                div{
+                    width: 35px; 
+                    height: 35px; 
+                    margin: 16px 0 5px 0;
+                }
+           }
+            li:hover div{ transition: 0.4s ease-out;}
+            li:nth-child(1){
+                 div{
+                     background: url('../img/icon.png') 0 -650px no-repeat;
+               }
+            }
+            li:nth-child(1):hover div{
+                background: url('../img/icon.png') -50px -650px no-repeat;
+            }
+            li:nth-child(2) div{
+                background: url('../img/icon.png') -100px -650px no-repeat; 
+                margin-left: 6px;
+            }
+            li:nth-child(2):hover div{
+                background: url('../img/icon.png') -150px -650px no-repeat;
+            }
+            li:nth-child(3) div{
+                background: url('../img/icon.png') 0 -700px no-repeat; 
+                margin-left: 6px;
+            }
+            li:nth-child(3):hover div{
+                 background: url('../img/icon.png') -50px -700px no-repeat;
+            }
+            li:nth-child(4) div{
+                 background: url('../img/icon.png') -100px -700px no-repeat; 
+                 margin-left: 6px;
+            }
+            li:nth-child(4):hover div{
+                background: url('../img/icon.png') -150px -700px no-repeat;
+            }
+            li:nth-child(5) div{
+                background: url('../img/icon.png') 0 -750px no-repeat; 
+                margin-left: 6px;
+            }
+            li:nth-child(5):hover div{
+                background: url('../img/icon.png') -50px -750px no-repeat;
+            }
+             li:nth-child(6) div{
+                 background: url('../img/icon.png') -100px -750px no-repeat; 
+                 margin-left: 1px;
+            }
+            li:nth-child(6):hover div{
+                background: url('../img/icon.png') -149px -750px no-repeat;
+            }
+            li:first-child{margin-left: 45px;}
+            li+li{margin-left: 137px;}
+        }
+    }
+    
+}

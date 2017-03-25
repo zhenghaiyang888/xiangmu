@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <!--<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+		<title>首页</title>
+		<link rel="stylesheet" href="../css/shouye.css"/>
+        <link rel="stylesheet" href="../css/swiper.css" />
+        <style>
+        
+            
+            .header ul li .oa1{
+                    font-weight: bold;
+                     font-size: 20px;
+                    color: red;
+                }
+             
+        </style>
+	</head>
+	<body>
+			<header class="header">
+				<a href="#" class="a1"></a>
+				<ul class="oul">
+					<li class="oli"><a href="javascript:;" title="首页" class="oa1">首页</a></li>
+					<li><a href="fenlei.html" id="menu-item_active" title="分类">分类</a></li>
+					<li><a href="dapei.html" title="搭配">搭配</a></li>
+					<li><a href="xiangqing.html" title="详情">详情</a></li>
+					<li><a href="sousuo.html" title="搜索">搜索</a></li>
+					<li><a href="denglu.html" title="登录">登录</a></li>
+					<li><a href="me.html" title="我的">我的</a></li>
+					<li><a href="gouwuche.html" title="购物袋">购物袋</a></li>
+				</ul>
+
+			    <h1><span></span></h1>
+			   <p>
+			   	 <a href="zhuce.html" class="a5">注册</a>
+			   	 <a href="javascript: alert('对不起，您的设备不支持扫一扫功能！')" class="a2"></a>
+			   	 <a href="sousuo.html" class="a3"></a>
+			   	 <a href="#" class="a4"></a>
+			   </p>
+			</header>
+			
+			<div class="main">
+				<div class="oleft"></div>
+				<div class="swiper-container">
+						<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../img/shouye/banner01.png"/></div>
+						<div class="swiper-slide"><img src="../img/shouye/banner02.png"/></div>
+						<div class="swiper-slide"><img src="../img/shouye/banner03.png"/></div>
+						<div class="swiper-slide"><img src="../img/shouye/banner04.png"/></div>
+						<div class="swiper-slide"><img src="../img/shouye/banner05.png"/></div>
+						
+						</div>
+						<!-- 如果需要分页器 -->
+						<div class="swiper-pagination"></div>
+						
+						<!-- 如果需要导航按钮 -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"`></div>
+						
+						<!-- 如果需要滚动条 -->
+						<div class="swiper-scrollbar"></div>
+				</div>
+				<div class="oright"></div>
+			</div>
+			
+			<div class="main2">
+				<h2>优选品牌</h2>
+				<div class="img1">
+					<div class="div1">
+						<a href="#"><img src="../img/shouye/shouye-youxuan01.png"/></a>
+					</div>
+					<div>
+						<a href="#"><img src="../img/shouye/shouye-youxuan02.png"/></a>
+					</div>
+					<div>
+						<a href="#"><img src="../img/shouye/shouye-youxuan03.png"/></a>
+					</div>
+				</div>
+				
+				<div class="div2">
+					<a href="#"><img src="../img/shouye/shouye-pinpai01.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai02.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai03.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai04.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai05.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai06.png"/></a>					
+				</div>
+				<div class="div3">
+					<a href="#"><img src="../img/shouye/shouye-pinpai07.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai08.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai09.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai10.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai11.png"/></a>
+					<a href="#"><img src="../img/shouye/shouye-pinpai12.png"/></a>
+					
+				</div>
+			</div>
+
+	</body>
+</html>
+
+<script src="../js/jquery-3.1.1.js"></script>
+<script src="../js/swiper.jquery.min.js"></script>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+//  direction: 'vertical',
+    loop: true,
+    autoplay:1000,
+//  direction : 'vertical',
+    // 如果需要分页器
+  pagination : '.swiper-pagination',
+ // effect : 'cube',
+  
+    
+    // 如果需要前进后退按钮
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+  
+    
+    // 如果需要滚动条
+//  scrollbar: '.swiper-scrollbar',
+  })   
+  
+  
+  
+  
+  
+//下拉菜单
+        $(document).ready(function () {
+                $('.a1').click(
+                function () { $('.oul').slideToggle(); }
+           );
+          
+        });
+
+       $('header .oul li').click(function(){
+       	   $('header .oul li').eq($(this).index()).addClass('oli').siblings('header .oul li').removeClass('oli');
+           
+       })
+       
+       
+       
+       
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </script>
+

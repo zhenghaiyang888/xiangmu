@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索</title>
+		<link rel="stylesheet" type="text/css" href="../css/sousuo.css"/>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#box{
+				width: 800px;
+				height: 300px;
+				border: 2px solid #4C4C4C;
+				margin: 0 auto;
+				display: none;
+			}
+			#con{
+				width: 800px;
+				height: 50px;
+				border: 1px solid green;
+				text-align: center;
+				line-height: 50px;
+				font-size: 18px;
+				font-weight: bold;
+				color: greenyellow;
+			}
+			#box .oul li{
+				list-style: none;
+				width: 131px;
+				height: 30px;
+				border: 1px solid #4C4C4C;
+				float: left;
+				text-align: center;
+				line-height: 30px;
+				font-size: 20px;
+				font-weight: bold;
+				background: #4C4C4C;
+				color: #fff;
+			}
+			li{
+				list-style: none;
+				width: 133px;
+				height: 35px;
+				border-bottom: 1px solid #C1C1C1;
+				float: left;
+				text-align: center;
+				line-height: 30px;
+				font-size: 18px;
+				color: #C1C1C1;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<header>
+		   <div class="h-rtn"><a href="shouye.html"></a></div>
+		    <div class="h-mid">
+		        <input type="search" name="sch" id="sch">
+		        <a href="#"><button></button></a>
+		    </div>
+		</header>
+        <main>
+        	<div id="box">
+				<div id="con"></div>
+				<ul class="oul">
+					<li>风向</li>
+					<li>风级</li>
+					<li>高温</li>
+					<li>天气</li>
+					<li>低温</li>
+					<li>日期</li>				
+				</ul>
+				<ul class="aul">
+					
+				</ul>
+			</div>	
+        </main>
+        	
+	</body>
+</html>
+
+<script src="../js/jquery-3.1.1.js"></script>
+<script>
+	   //获取天气
+//	$('button').click(function(){
+//		$('#box').show();
+//		$('.aul').children().remove();		
+//		
+//		var $val=$('#sch').val();
+////		console.log($val);
+//		$.ajax({		
+//		url:"http://wthrcdn.etouch.cn/weather_mini?city="+$val,
+//		type:'get',				
+//		dataType:'json',
+//		async:true,
+//		success:function(data){
+//			console.log(data);
+//			if(data.status==1002){
+//				alert(1);
+//			}
+//			$.each(data,function(i,j) {				
+//				$('#con').html(j.ganmao);
+//				$.each(j.yesterday, function(a,b) {					
+//					$('.aul').append("<li>"+b+"</li>");
+//				});
+//				$.each(j.forecast, function(c,d) {
+//					//console.log(j.forecast);
+//					$.each(d, function(e,f) {
+//						console.log(f);
+//						$('.aul').append("<li>"+f+"</li>");
+//					});
+//				});
+//			});
+//		}
+//	})
+//})
+
+
+//获取天气
+$('button').click(function(){
+	$('#box').show();
+	$('#con').html(' ');
+	$('.aul').children().remove();
+	var $val=$('#sch').val();
+	$.ajax({
+		type:"get",
+		url:"http://wthrcdn.etouch.cn/weather_mini?city="+$val,
+		async:true,
+		dataType:'json',
+		success:function(data){
+//			console.log(data);
+			if(data.status==1002){
+				alert("您好,您输入的城市有误！例：'北京市'->'北京';  '海淀区'->'海淀'。");
+			}
+			$.each(data, function(a,b) {
+//				console.log(b);
+				$('#con').html(b.ganmao);
+				$.each(b.yesterday, function(i,j) {
+					$('.aul').append("<li>"+j+"</li>");
+				});
+				$.each(b.forecast, function(c,d) {
+//					console.log(d);
+					$.each(d,function(e,f){
+//						console.log(f);
+						$('.aul').append("<li>"+f+"</li>");
+					})
+				});
+			});
+		}
+	});
+})
+
+
+</script>

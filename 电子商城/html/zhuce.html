@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/zhuce.css"/>
+    <style>
+    	.error{
+    		color: red;
+    		margin-left: 10px;
+    		font-size: 20px;
+    	}
+    	#username,#password,#confirm_password,#tel{
+    		width: 276px;
+            height: 48px;
+            /*border: 0;*/
+            line-height: 48px;
+            margin-left: 10px;
+            /*outline:none;*/
+           padding-left: 40px;
+           margin-top: 10px;
+    	}
+    	#username{
+    		position: relative;
+    	}
+    	#sp1{
+    		width: 22px;
+            height: 23px;
+            display: block;
+            /*border: 1px solid red;*/
+            background-image: url("../img/icon.png");
+            background-repeat:no-repeat;
+            /*margin: 10px 0 0 10px;*/
+            z-index: 10;
+            background-position: 0 -350px;
+            position: absolute;
+            left: 20px;
+            top: 65px;
+    	}
+    	#sp2,#sp3{
+    		width: 20px;
+            height: 24px;
+           
+            display: block;
+            /*border: 1px solid red;*/
+            background-image: url("../img/icon.png");
+            background-repeat:no-repeat;
+            /*margin: 10px 0 0 10px;*/
+            z-index: 10;
+            background-position: -50px -350px;
+            position: absolute;
+            left: 20px;
+            top: 130px;
+    	}
+    	#sp3{
+    	
+            position: absolute;
+            left: 20px;
+            top: 190px;
+    	}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <h1><a href="shouye.html"></a></h1>
+            <span></span>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="k1"></div>
+                <dl>
+                    <dt><img src="../img/denglu/denglu-pic01.png" alt=""/></dt>
+                    <dd><font class="lf">有范</font><font class="rt">是一种生活态度</font></dd>
+                </dl>
+            </div>
+            <div class="right">
+                <div class="all">
+                    <div class="title">登陆有范</div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <form class="cmxform" id="signupForm" method="get" action="">
+						  <fieldset>
+						     <table>
+						     	<tr>
+						     		<span id="sp1"></span>
+						     		<td><input id="username" name="username" placeholder="用户名" type="text"></td> 
+						     		
+						     	</tr>
+						     	<tr>
+						     		<span id="sp2"></span>
+						     		<td>  <input id="password" name="password" placeholder="密码" type="password"></td>    		
+						     	</tr>
+						     	<tr>
+						     	    <span id="sp3"></span>
+						     		<td><input id="confirm_password" name="confirm_password" placeholder="重复密码" type="password"></td>    		
+						     	</tr>
+						        <tr>
+						     	    <span id="sp3"></span>
+						     		<td><input id="tel" name="phone" placeholder="手机号码" type="tel"></td>   		
+						     	</tr>
+						     	<tr>
+						     		
+						     		<td> <input class="submit" type="submit" value="注册" id="sub"></td>    		
+						     	</tr>
+						     </table>
+						  
+						  </fieldset>
+						</form>
+                    
+                    
+                    
+                    
+                    
+                    <div class="ss2">
+                        <div class="left-one"><input type="checkbox" id="in"/><label for="in">记住登陆状态</label></div>
+                        <div class="right-one"><a href="#" class="a1">忘记密码？</a>|<a href="#" class="a2">立即注册</a></div>
+                    </div>
+                    <div class="san">
+                        <font>第三方登录方式：</font>
+                        <div class="ss3 ss"></div>
+                        <div class="ss2 ss"></div>
+                        <div class="ss4 ss"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="../js/jquery-3.1.1.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/language.js"></script>
+<script>
+      $().ready(function(){
+	  $("#signupForm").validate({
+	  	debug:true,
+	  
+    rules: {
+      username: {
+        required: true,
+        rangelength:[6,16]
+      },
+      password: {
+        required: true,
+        rangelength:[6,16]
+      },
+      confirm_password: {
+        required: true,
+        rangelength:[6,16],
+        equalTo: "#password"
+      },
+      email: {
+        required: true,
+        email: true
+      },
+       phone: {
+        required: true,
+        minlength: 11,
+        maxlength: 11
+      },
+    },
+    messages: {
+      username: {
+        required: "请输入用户名",
+        rangelength: "用户名必需在6-16位之间"
+      },
+      password: {
+        required: "请输入密码",
+       rangelength: "密码必需在6-16位之间"
+      },
+      confirm_password: {
+        required: "请输入密码",
+        rangelength: "密码必需在6-16位之间",
+        equalTo: "两次密码输入不一致"
+      },
+       phone: {
+        required: "请输入正确的手机号",
+        minlength: "手机号长度为 11位",
+       
+      },
+      email: "请输入一个正确的邮箱",
+    }
+})
+})
+      
+      $('#sub').click(function(){
+      	 var $name=$('#username').val();
+      	 var $psd=$('#password').val();
+      	 var $phone=$('#tel').val();
+      	 
+      	 
+      	 $.ajax({
+      	 	type:"get",                                                     
+      	 	url:"http://www.petrichoro.com/ports/index.php/Home/User/regist?user="+$name+'&psd='+$psd+'&phone='+$phone,
+      	 	async:true,
+      	 	dataType:'jsonp',
+      	 	success:function(data){
+      	 		console.log(data);
+      	 		if(data.status==-9){
+      	 			alert("用户名已存在");
+      	 		}
+      	 		if(data.status==1){
+      	 			location.href="denglu.html";
+      	 		}
+      	 	}
+      	 });
+      })
+</script>

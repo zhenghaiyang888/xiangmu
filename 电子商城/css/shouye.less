@@ -1,0 +1,226 @@
+@import url('reset.css');
+.full {
+    width: 100%;
+    height: 100%;
+}
+.whb(@w, @h, @b) {
+    width: @w;
+    height: @h;
+    background: @b;
+}
+.f(@f:left) {
+    float: @f;
+}
+.p(@p) {
+    position: @p;
+}
+
+.full{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box(@dir:horizontal){
+    display: -moz-box;
+   display: -webkit-box;
+    -moz-box-orient: @dir;
+  -webkit-box-orient: @dir;
+}
+
+html,body,.wrap{
+    .full;
+}
+
+
+    
+    .header{
+        .whb(1024px,43px,#323333);
+        margin: 0 auto;
+       
+        h1{
+              float: left;
+              margin-left: 440px;
+             span{
+                 .whb(33px,33px,null);
+                 margin-top: 5px;              
+                 display: block;
+                 background: url(../img/icon.png) no-repeat;
+                 background-position:-100px -450px;
+             }
+        }
+        .a1{
+            
+            position: relative;
+            .whb(22px,22px,null);
+             margin-left: 32px;
+          
+            display: block;
+            margin-top: 10px;
+            float: left;
+            background: url(../img/icon.png) no-repeat;
+            background-position:0 0;        
+        }
+        .a1:hover{
+            background-position:-50px 0;  
+        }
+        .oul{
+           .whb(137px,330px,null);
+          display: none;
+          position: absolute;
+          z-index: 2;
+            top: 43px;
+            
+            li{
+                 
+                .whb(137px,41.2px,#000000);
+                
+               
+                text-align: center;
+                line-height: 41.2px;
+                a{
+                     font-weight: bold;
+                     font-size: 18px;
+                    color: #fff;
+                }
+                
+                
+               
+            }
+         
+             li:hover{
+                    background: #222222;
+                    a{
+                        color: yellow;
+                        text-decoration: none;
+                    }
+                    
+               }
+        }
+    
+        p{
+            float: right;
+            margin-top: 10px;
+            a{
+                float: left;
+                 .whb(22px,22px,null);
+                 display: block;
+                 margin-right: 15px;
+                 background: url(../img/icon.png) no-repeat;
+                
+            }
+            .a5{
+                width: 30px;
+                color: #fff;
+                margin-right: 35px;
+                background: none;
+            }
+            .a2{
+                 background-position: -100px 0;  
+            }
+            .a2:hover{
+                 background-position: -150px 0;  
+            }
+            .a3{
+                 background-position: 0 -100px;  
+            }
+            .a3:hover{
+                background-position: -50px -100px;  
+            }
+            .a4{
+                 background-position: -100px -100px;  
+            }
+            .a4:hover{
+                 background-position: -150px -100px;  
+            }
+        }
+     
+    }
+    
+    .main{
+       
+        .whb(1024px,330px,null);       
+         margin: 0 auto;
+        overflow: hidden;
+        .oleft{
+            .whb(133px,330px,#000000);
+             float: left;
+           opacity: 0.5;
+            
+        }
+        
+        .swiper-container{
+               .whb( 756px,328px,null);
+                float: left;
+             
+          
+        }
+         .oright{
+            .whb(134px,330px,#000000);
+            float: left;
+             opacity: 0.5;
+            
+        }
+    }
+    
+    .main2{
+        .whb(1024px,340px,null);       
+         margin: 0 auto;
+        
+         h2{
+             .whb(1024px,50px,null);
+            
+             text-align: center;
+             line-height: 50px;
+             background: url(../img/shouye/shouye-tiaotiao.png) no-repeat 6px 25px;
+         }
+         .img1{
+             .whb(1024px,141px,null);
+            
+             div{
+                 .whb(325px,141px,null);
+             
+                 float: left;
+                 margin-left: 12px;
+                 overflow: hidden;
+                 a{
+                     
+                    img{
+                     .whb(100%,100%,null);
+                     transition: 0.7s;
+                   }
+                    img:hover{
+                     transform: scale(1.3);
+                   
+                   }
+                }
+             }
+         }
+         .div2{
+             .whb(1024px,63px,null);
+             a:hover{
+                 opacity: 0.5;
+             }
+         }
+         .div3{
+             .whb(1024px,63px,null);
+             a:hover{
+                 opacity: 0.5;
+             }
+         }
+    }
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
